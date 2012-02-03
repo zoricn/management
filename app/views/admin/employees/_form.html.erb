@@ -1,0 +1,53 @@
+<%= semantic_form_for([:admin, @employee]) do |f| %>
+
+    <%= f.inputs :name => "Basic" do %>
+      <%= f.input :name, :input_html => { :class => 'text-small'} %>
+      <%#= f.input :source, :as => :radio %>
+      <%= f.label :source, "Local", :class => "radio-labels-holder" %>
+      <%= f.radio_button :source, 
+                               Employee::SOURCE_LOCAL, 
+                               :id => :local,
+                               :disabled => false %> 
+      <%= f.label :source, "Elance", :class => "radio-labels-holder" %>
+
+    	
+    	<%= f.radio_button :source, 
+                               Employee::SOURCE_ELANCE, 
+                               :id => :elance,
+                               :disabled => false %> 
+      <%= f.label :source, "oDesk", :class => "radio-labels-holder" %>
+    	<%= f.radio_button :source, 
+                               Employee::SOURCE_ODESK, 
+                               :id => :odesk,
+                               :disabled => false %> 
+      <%= f.input :skype, :input_html => { :class => 'text-small'} %>
+      <%= f.input :email, :input_html => { :class => 'text-small'} %>
+      <%= f.input :country %>
+      <%= f.input :hour_rate %>
+      <%= f.input :monthly_rate %>
+      <%= f.input :availability, :hint => "Hours per week" %>
+      <%= f.label :available, "Available", :class => "radio-labels-holder" %>
+     	<%= f.radio_button :available, 
+                               Employee::AVAILABLE, 
+                               :id => :available,
+                               :disabled => false %> 
+      <%= f.label :available, "Partly", :class => "radio-labels-holder" %>
+     	<%= f.radio_button :available, 
+                               Employee::PARTLY_AVAILABLE, 
+                               :id => :partly_available,
+                               :disabled => false %> 
+      <%= f.label :available, "NO", :class => "radio-labels-holder" %>
+     	<%= f.radio_button :available, 
+                               Employee::NOT_AVAILABLE, 
+                               :id => :not_available,
+                               :disabled => false %> 
+    <% end %>
+
+
+    <%= f.inputs :name => "Advanced" do %>
+      <%= f.input :notes, :as => :text %>
+    <% end %>
+
+    <%= f.buttons %>
+
+  <% end %>

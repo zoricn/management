@@ -1,0 +1,21 @@
+<% title "Projects" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% for project in @projects %>
+    <tr>
+      <td><%= project.name %></td>
+      <td><%= project.description %></td>
+      <td class="action">
+        <%= link_to "Show", admin_project_path(project), :class => 'view' %>
+        <%= link_to "Edit", edit_admin_project_path(project), :class => 'edit' %>
+        <%= link_to "Destroy", admin_project_path(project), :confirm => 'Are you sure?', :method => :delete, :class => 'delete' %>
+	     </td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Project", new_admin_project_path %></p>

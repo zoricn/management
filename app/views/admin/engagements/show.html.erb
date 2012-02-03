@@ -1,0 +1,15 @@
+<% title "Engagement" %>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @engagement.employee_id %>
+</p>
+<p>
+  <strong>Project:</strong>
+  <%= @engagement.project_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_admin_engagement_path(@engagement) %> |
+  <%= link_to "View All", admin_engagements_path %>
+</p>

@@ -1,0 +1,23 @@
+one:
+  name: MyString
+  source: 1
+  country: MyString
+  city: MyString
+  time: 
+  hour_rate: 1
+  monthly_rate: 1
+  availability: 1
+  available: 1
+  notes: MyString
+
+two:
+  name: MyString
+  source: 1
+  country: MyString
+  city: MyString
+  time: 
+  hour_rate: 1
+  monthly_rate: 1
+  availability: 1
+  available: 1
+  notes: MyString

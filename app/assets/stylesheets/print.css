@@ -1,0 +1,164 @@
+/* --------------------------------------------------------------
+
+   print.css
+   * Gives you some sensible styles for printing pages.
+   * See Readme file in this directory for further instructions.
+
+   Some additions you'll want to make, customized to your markup:
+   #header, #footer, #navigation { display:none; }
+
+-------------------------------------------------------------- */
+
+body {
+  line-height: 1.5;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color:#000;
+  background-color: #4B7399;
+  font-size: 10pt;
+}
+
+
+/* Layout
+-------------------------------------------------------------- */
+
+.container {
+  background: #fff;
+  margin: 0 auto;
+  width: 75%;
+  padding: 0px 40px;
+  border: solid 1px black;
+  margin-top: 0px;
+}
+
+.login{
+height:23px;
+margin-top:10px;
+width:100%;
+}
+
+.header{
+height:105px;
+text-align:left;
+width:100%;
+}
+
+.content{
+  margin: 0 auto;
+  width: 95%;
+  padding: 20px 40px;
+  margin-top: 0px;
+}
+
+hr {
+  background:#ccc;
+  color:#ccc;
+  width:100%;
+  height:2px;
+  /*margin:2em 0;*/
+  padding:0;
+  border:none;
+}
+hr.space {
+  background: #fff;
+  color: #fff;
+  visibility: hidden;
+}
+
+
+/* Text
+-------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 { font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif; }
+code { font:.9em "Courier New", Monaco, Courier, monospace; }
+
+a img { border:none; }
+p img.top { margin-top: 0; }
+
+blockquote {
+  margin:1.5em;
+  padding:1em;
+  font-style:italic;
+  font-size:.9em;
+}
+
+.small  { font-size: .9em; }
+.large  { font-size: 1.1em; }
+.quiet  { color: #999; }
+.hide   { display:none; }
+
+
+/* Links
+-------------------------------------------------------------- */
+
+a:link, a:visited {
+  background: transparent;
+  font-weight:700;
+  text-decoration: underline;
+}
+
+/* 
+	This has been the source of many questions in the past. This 
+	snippet of CSS appends the URL of each link within the text. 
+	The idea is that users printing your webpage will want to know 
+	the URLs they go to. If you want to remove this functionality, 
+	comment out this snippet and make sure to re-compress your files.
+ */
+/*a:link:after, a:visited:after {   content: " (" attr(href) ")";   font-size: 90%; }*/
+
+/* If you're having trouble printing relative links, uncomment and customize this:
+   (note: This is valid CSS3, but it still won't go through the W3C CSS Validator) */
+
+/* a[href^="/"]:after {
+  content: " (http://www.yourdomain.com" attr(href) ") ";
+} */
+
+
+/* -----------------------------------*/
+/* ---------->>> NAVIGATION <<<-----------*/
+/* -----------------------------------*/
+
+#navigation{
+width:100%;
+margin:0 auto;
+margin-top: 30px;
+}
+
+#navigation li {
+display:inline;
+font-family:Helvetica,Arial,Verdana,san-serif;
+font-size:12px;
+}
+
+#navigation li a {
+background:url("images/header-li-hover-bg.gif") no-repeat scroll -2000px 100% transparent;
+color:#464A52;
+display:inline-block;
+font-weight:normal;
+margin-right:17px;
+padding-bottom:18px;
+text-transform:uppercase;
+text-decoration: none; 
+}
+#navigation li a.selected {
+background-position:50% 28px;
+color:#003F8E;
+}
+#navigation li a:hover {
+background-position:50% 23px;
+color:#6699CC;
+text-decoration: none; 
+}
+
+
+
+
+
+.current #navigation {
+	border:2px none;
+	margin:0 1px;
+	padding:2px 0px 0px 0px;
+	float:left;
+	cursor:pointer;
+	font-weight:bold;
+	height: 20px;
+}

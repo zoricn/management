@@ -1,0 +1,37 @@
+<% title "Employees" %>
+
+<table class="sortable">
+  <tr>
+    <th><%= sortable "id", %></th>
+    <th><%= sortable "name", %></th>
+    <th><%= sortable "source", %></th>
+    <th><%= sortable "country", %></th>
+    <th><%= sortable "city", %></th>
+    <th><%= sortable "hour_rate", %></th>
+    <th><%= sortable "monthly_rate", %></th>
+    <th><%= sortable "availability", %></th>
+    <th><%= sortable "available", %></th>
+    <th>Notes</th>
+  </tr>
+  <% for employee in @employees %>
+    <tr>
+      <td><%= employee.id %></td>
+      <td><%= employee.name %></td>
+      <td><%= employee.source? %></td>
+      <td><%= employee.country %></td>
+      <td><%= employee.city %></td>
+      <td><%= employee.hour_rate %></td>
+      <td><%= employee.monthly_rate %></td>
+      <td><%= employee.availability %></td>
+      <td><%= employee.available? %></td>
+      <td><%= employee.notes %></td>
+      <td class="action">
+        <%= link_to "Show", admin_employee_path(employee), :class => 'view' %>
+        <%= link_to "Edit", edit_admin_employee_path(employee), :class => 'edit' %>
+        <%= link_to "Destroy", admin_employee_path(employee), :confirm => 'Are you sure?', :method => :delete, :class => 'delete' %>
+	     </td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Employee", new_admin_employee_path %></p>

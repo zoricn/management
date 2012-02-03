@@ -1,0 +1,9 @@
+<%= semantic_form_for([:admin, @engagement]) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.input :employee, :as => :select, :collection => Employee.find(:all) %>
+    <%= f.input :project, :as => :select, :collection => Project.find(:all) %>
+    <%= f.input :commitment, :hint => "Hours for project" %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
