@@ -8,6 +8,16 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+<SCRIPT LANGUAGE="JavaScript">
+  $(function() {
+   $('#flash_notice').delay(500).fadeIn('normal', function() {
+      $(this).delay(2500).fadeOut();
+   });
+	$('#flash_alert').delay(500).fadeIn('normal', function() {
+		    $(this).delay(2500).fadeOut();
+		 });
+	}); 
+</SCRIPT>
     <div class="container">
 
     <div class="helpNav">

@@ -86,7 +86,7 @@ input.title   { background: #FFFFFF; border:1px solid #DDDDDD; color:#646464; fo
 input.title   { font-size:1.5em; }
 textarea      { width: 390px; height: 250px; padding:5px; }
 
-.optional {float:left;width:300px;}
+.optional {float:none;width:300px;}
 /* 
   This is to be used on forms where a variety of elements are 
   placed side-by-side. Use the p tag to denote a line. 

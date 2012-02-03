@@ -1,5 +1,6 @@
 <%= semantic_form_for([:admin, @employee]) do |f| %>
-
+    <%#= f.buttons %>
+<input class="create" name="commit" type="submit" value="Create Employee" />
     <%= f.inputs :name => "Basic" do %>
       <%= f.input :name, :input_html => { :class => 'text-small'} %>
       <%#= f.input :source, :as => :radio %>
@@ -48,6 +49,6 @@
       <%= f.input :notes, :as => :text %>
     <% end %>
 
-    <%= f.buttons %>
+
 
   <% end %>

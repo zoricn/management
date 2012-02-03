@@ -11,12 +11,17 @@
     <th><%= sortable "monthly_rate", %></th>
     <th><%= sortable "availability", %></th>
     <th><%= sortable "available", %></th>
-    <th>Notes</th>
   </tr>
   <% for employee in @employees %>
     <tr>
       <td><%= employee.id %></td>
-      <td><%= employee.name %></td>
+      <td><%= employee.name %>
+      <% unless employee.skype.nil? -%>
+        <script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
+<a href="skype:<%= employee.skype %>?chat"><img src="http://mystatus.skype.com/smallicon/<%= employee.skype %>" style="border: none;" width="16" height="16" alt="My status" /></a>
+	
+      <% end -%>
+      </td>
       <td><%= employee.source? %></td>
       <td><%= employee.country %></td>
       <td><%= employee.city %></td>
@@ -24,7 +29,6 @@
       <td><%= employee.monthly_rate %></td>
       <td><%= employee.availability %></td>
       <td><%= employee.available? %></td>
-      <td><%= employee.notes %></td>
       <td class="action">
         <%= link_to "Show", admin_employee_path(employee), :class => 'view' %>
         <%= link_to "Edit", edit_admin_employee_path(employee), :class => 'edit' %>
